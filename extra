@@ -1,0 +1,63 @@
+https://github.com/Aakashdeveloper
+https://github.com/
+https://nodejs.org/en/
+https://code.visualstudio.com/download
+
+Basic JavaScript
+NPM
+Basic NodeJS(in built)(Os,file,http)
+Third Party Api (Weather Api)
+NodeJS(full Stack App) (Node-EJS-Mongo-Express)
+Node-Es6(.babel)
+Redis  > 6379
+MongoDb Basic >27017  (local/cloud)
+Api with NodeJS(Rest)
+DashBoard(Crud)
+Testing
+Login/Logout(JWT)
+Oauth(with github)
+Oauth(with google)
+ImageUpload
+NodeJs with postgres
+GraphQl API
+OO_NodeJs
+Github
+Chatapp
+Email With Node(nodemailer)
+FIREBASE(0PTIONAL)
+--Deployment---
+Nginx
+Pm2
+Docker
+Heroku
+
+--------NOT---------
+React/Angular
+Html/css/jquery
+
+
+////////////////////////////
+NodeJs
+
+Single Thread
+Async
+Non Blocking I/O
+
+]]]]]]]]]]]]]]]]]]
+
+NPM > Node Package Manger
+> JSON
+(JavaScript Object Notation)
+Way to represent data
+[
+    {
+        RollNO:1
+        name:"John",
+        class:"UI"
+    },
+    {
+        RollNO:1
+        name:"John",
+        class:"UI"
+    }
+]
