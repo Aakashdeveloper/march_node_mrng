@@ -61,3 +61,24 @@ Way to represent data
         class:"UI"
     }
 ]
+
+package.JSON
+> Entry Point to application
+> Meta data(name description, version)
+> scripts(start,test)
+> packages
+
+>>>>>
+Step to generate package.JSON
+<<<<<<<<
+* NodeJs must be install in system
+> go inside the folder using terminal/cmd
+> type npm init
+> answer all questions
+> type "yes"
+
+>>>>>
+How to install package/dependency/node_modules
+<<<<<<<<
+> go inside the folder using terminal/cmd
+> npm i packagename / npm install packagename 
