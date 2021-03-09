@@ -1,0 +1,14 @@
+{
+  "name": "nodeinbuilt",
+  "version": "1.0.0",
+  "description": "this is to start server",
+  "main": "fs.js",
+  "scripts": {
+   "start":"node staticapi.js"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "nareshit",
+  "license": "ISC"
+}

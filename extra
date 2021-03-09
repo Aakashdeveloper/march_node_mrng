@@ -6,8 +6,9 @@ https://code.visualstudio.com/download
 Basic JavaScript
 NPM
 Basic NodeJS(in built)(Os,file,http)
-Third Party Api (Weather Api)
+//////////////
 NodeJS(full Stack App) (Node-EJS-Mongo-Express)
+Third Party Api (Weather Api)
 Node-Es6(.babel)
 Redis  > 6379
 MongoDb Basic >27017  (local/cloud)
