@@ -83,3 +83,35 @@ How to install package/dependency/node_modules
 <<<<<<<<
 > go inside the folder using terminal/cmd
 > npm i packagename / npm install packagename 
+
+local dependency
+> local to the folder
+> use inside same app
+
+Global dependency
+> local to the system
+> need admin access
+> use by any app
+> will not add in package.json
+> start/build/test
+
+dev dependency
+> only need at the time of development
+> specific to folder
+
+////Step to install global dependency/////
+#window
+> open cmd as admin
+> npm i -g packagename
+
+#mac/linux
+> open terminal
+> sudo npm i -g packagename
+
+
+////////dev dependency//////
+> open cmd/terminal
+> npm i packagename --save-dev
+
+nodemon> to restart automatically
+npm i -g nodemon
