@@ -14,7 +14,8 @@
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.6",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongodb": "^3.6.4"
   },
   "devDependencies": {
     "mocha": "^8.3.1"

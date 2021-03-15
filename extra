@@ -115,3 +115,68 @@ dev dependency
 
 nodemon> to restart automatically
 npm i -g nodemon
+
+///////////////////
+Mongodb 
+> not a sql
+
+sno | Hindi | English | Computer
+ 1  | 80    |         |   80
+ 2  |       | 80      |
+ 3  | 80    |         |
+
+ [
+     {
+         sno:1,
+         hindi:80,
+         Computer:80
+     },
+     {
+         sno:2,
+         english:80
+     },
+     {
+         sno:3,
+         Hindi:80
+     }
+ ]
+
+ Terminology
+
+ SQL        MongoDb
+ Database   Database
+ Tables     Collections
+ row        document
+ select     find
+ insert     insert
+ update     update
+ delete     remove
+
+ ////
+ Setup  Mongo Offline
+ ////////
+ https://www.mongodb.com/try/download/community
+
+ #window
+ > in C\ make folder by the name of data  (c:\data)
+ > in data folder make folder by the name of db (c:\data\db)
+
+ > open cmd
+ > go inside (c:\programmfile\mongodb\4.4\server\bin)
+ > mongod (27017)
+
+ > open new cmd
+ > go inside (c:\programmfile\mongodb\4.4\server\bin)
+ > mongo 
+
+#mac/linux
+> on terminal root path root ~ make folder data\db
+> on terminal root path type mongod(27017)
+> on in terminal type mongo
+
+
+/////////
+setup online
+//////
+https://www.mongodb.com/cloud/atlas
+0.0.0.0/0

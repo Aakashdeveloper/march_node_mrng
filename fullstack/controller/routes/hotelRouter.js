@@ -1,5 +1,7 @@
 var express = require('express');
 var hotelRouter = express.Router();
+var mongodb = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017";
 
 var hotels = [
     {
@@ -820,15 +822,19 @@ var hotels = [
     }
   ]
   
-hotelRouter.route('/')
-  .get((req,res) => {
-    //res.send(hotels)
-    res.render('hotels',{title:'Hotels Page',hotels:hotels});
-  })
+function router(menu){
+  hotelRouter.route('/')
+    .get((req,res) => {
+      //res.send(hotels)
+      res.render('hotels',{title:'Hotels Page',hotels:hotels,menu:menu});
+    })
 
-hotelRouter.route('/details')
-  .get((req,res) => {
-    res.send("Hotel details")
-  })
+  hotelRouter.route('/details')
+    .get((req,res) => {
+      res.send("Hotel details")
+    })
+  
+  return hotelRouter
+}
 
-module.exports = hotelRouter
+module.exports = router
