@@ -6,23 +6,26 @@ https://code.visualstudio.com/download
 Basic JavaScript
 NPM
 Basic NodeJS(in built)(Os,file,http)
-//////////////
 NodeJS(full Stack App) (Node-EJS-Mongo-Express)
 Third Party Api (Weather Api)
 Node-Es6(.babel)
+//////////////
 Redis  > 6379
 MongoDb Basic >27017  (local/cloud)
+
 Api with NodeJS(Rest)
 DashBoard(Crud)
 Testing
 Login/Logout(JWT)
 Oauth(with github)
+
 Oauth(with google)
 ImageUpload
+OO_NodeJs
 NodeJs with postgres
 GraphQl API
-OO_NodeJs
 Github
+
 Chatapp
 Email With Node(nodemailer)
 FIREBASE(0PTIONAL)
@@ -180,3 +183,5 @@ setup online
 //////
 https://www.mongodb.com/cloud/atlas
 0.0.0.0/0
+
+npm i @babel/core @babel/register @babel/preset-env

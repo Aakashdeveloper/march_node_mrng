@@ -23,9 +23,22 @@ function router(menu){
       
     })
 
-  hotelRouter.route('/details')
+  hotelRouter.route('/details/:id')
     .get((req,res) => {
-      res.send("Hotel details")
+      // var id = req.params.id;
+      var {id} = req.params
+      mongodb.connect(url,(err,conn)=>{
+        if(err) {res.status(404).send('Error While connecting')}
+        else{
+          const dbo = conn.db('marchnode');
+          dbo.collection('hotels').find({_id:id}).toArray((err,data) =>{
+            if(err) {res.status(500).send('Error While Fetching')}
+            else{
+              res.render('hotelDetails',{title:'Hotels Page',hotels:data,menu:menu});
+            }
+          })
+        }
+      })
     })
   
   return hotelRouter

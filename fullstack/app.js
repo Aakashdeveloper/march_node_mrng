@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var port = 9800;
+var port = 9801;
 var menu =[
     {link:'/',name:'Home'},
     {link:'/hotel',name:'Hotels'},

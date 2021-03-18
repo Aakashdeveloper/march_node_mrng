@@ -6,12 +6,12 @@
 		<title>Storystrap Template</title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<link href="css/styles.css" rel="stylesheet">
+		<link href="/css/styles.css" rel="stylesheet">
 	</head>
 	<body>
 <header class="navbar navbar-bright navbar-fixed-top" role="banner">
@@ -50,7 +50,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-7">
-        <h1><%=title%>
+        <h1><%=hotels[0].name%>
           <p class="lead"></p>
         </h1>
       </div>
@@ -89,18 +89,19 @@
           
           
           <!--/stories-->
-          <% for(i=0;i<hotels.length;i++){%>
           <div class="row">    
             <br>
             <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="#"><img alt="" src="<%=hotels[i].thumb%>" style="width:100px;height:100px" class="img-circle"></a>
+              <a class="story-title" href="#"><img alt="" src="<%=hotels[0].thumb%>" style="width:100px;height:100px" class="img-circle"></a>
             </div>
             <div class="col-md-10 col-sm-9">
-              <h3><%=hotels[i].name%></h3>
+              <h3><%=hotels[0].name%></h3>
               <div class="row">
                 <div class="col-xs-9">
-                  <h4><span class="label label-default"><%=hotels[i].locality%></span></h4><h4>
-                  <small style="font-family:courier,'new courier';" class="text-muted">Rs <%=hotels[i].cost%>  • <a href="/hotel/details/<%=hotels[i]._id%>" class="text-muted">Read More</a></small>
+                  <h4><span class="label label-default"><%=hotels[0].locality%></span></h4>
+                  <h4><span class="label label-default"><%=hotels[0].address%></span></h4>
+                  <h4>
+                  <small style="font-family:courier,'new courier';" class="text-muted">Rs <%=hotels[0].cost%></small>
                   </h4></div>
                 <div class="col-xs-3"></div>
               </div>
@@ -109,7 +110,6 @@
           </div>
           <hr>
           <!--/stories-->
-          <%}%>
           
           
           <a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>
