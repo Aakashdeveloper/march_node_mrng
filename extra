@@ -9,8 +9,8 @@ Basic NodeJS(in built)(Os,file,http)
 NodeJS(full Stack App) (Node-EJS-Mongo-Express)
 Third Party Api (Weather Api)
 Node-Es6(.babel)
-//////////////
 Redis  > 6379
+//////////////
 MongoDb Basic >27017  (local/cloud)
 
 Api with NodeJS(Rest)
@@ -185,3 +185,29 @@ https://www.mongodb.com/cloud/atlas
 0.0.0.0/0
 
 npm i @babel/core @babel/register @babel/preset-env
+
+////Redis
+https://github.com/dmajkic/redis/downloads
+redis-server (6379)
+redis-cli
+
+KEYS *
+set key value
+get key
+
+set test "hiii"
+get test
+
+https://www.mongodb.com/cloud/atlas
+
+> Create New cluster
+> M0 sandbox
+> Create Cluster
+> Database access
+    > Add New Db user
+        > User/Password
+            (avoid special char $ @)
+        > Atlas Admin
+> Network access
+    > Add Ip Address
+    > 0.0.0.0/0
