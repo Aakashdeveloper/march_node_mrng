@@ -41,3 +41,20 @@ db.hotels.find({city_name:'Mumbai'}).pretty()
 ///projection
 
 db.hotels.find({city_name:'Mumbai'},{name:1,city_name:1,_id:0})
+
+db.hotels.find({cost:{$lt:5000,$gt:2000}},{name:1,cost:1})
+
+///
+db.user.update(
+    {_id:1},
+    {
+        $set:{
+            city:'Delhi'
+        }
+    }
+)
+
+//delete
+> Remove all record
+db.user.remove({})
+db.user.remove({_id:1})

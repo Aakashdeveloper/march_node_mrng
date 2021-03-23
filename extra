@@ -211,3 +211,6 @@ https://www.mongodb.com/cloud/atlas
 > Network access
     > Add Ip Address
     > 0.0.0.0/0
+
+
+    npm i express cors ejs mongodb body-parser chai chai-http mocha
