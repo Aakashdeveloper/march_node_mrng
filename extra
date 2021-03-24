@@ -10,15 +10,15 @@ NodeJS(full Stack App) (Node-EJS-Mongo-Express)
 Third Party Api (Weather Api)
 Node-Es6(.babel)
 Redis  > 6379
-//////////////
 MongoDb Basic >27017  (local/cloud)
-
 Api with NodeJS(Rest)
+//////////////
+
 DashBoard(Crud)
 Testing
 Login/Logout(JWT)
-Oauth(with github)
 
+Oauth(with github)
 Oauth(with google)
 ImageUpload
 OO_NodeJs

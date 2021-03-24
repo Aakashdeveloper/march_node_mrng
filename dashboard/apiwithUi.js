@@ -13,21 +13,10 @@ app.use(cors());
 ///parse data for post call
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodParser.json())
-app.use(express.static(__dirname+'/public'));
-app.set('views','./views');
-app.set('view engine','ejs');
 
 // Health Check
-app.get('/health',(req,res) => {
-    res.status(200).send("Health Ok")
-})
-
-// Home page
 app.get('/',(req,res) => {
-    db.collection(col_name).find().toArray((err,result) => {
-        if(err) throw err;
-       res.render('index',{data:result})
-    })
+    res.status(200).send("Health Ok")
 })
 
 // post User
