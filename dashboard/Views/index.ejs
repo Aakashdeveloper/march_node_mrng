@@ -69,12 +69,137 @@
                         <%}%>
                     </tbody>
                 </table>
+                <!-- The Modal -->
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                    
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                            <h4 class="modal-title">Modal Heading</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                    
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <form action="/updateUser" method="POST" id="update_user">
+                                    <input type="text" readonly class="form-control" id="update_id"  name="_id">
+                                    <div class="form-group">
+                                        <label for="name">Name:</label>
+                                        <input type="text" class="form-control" id="update_name" placeholder="Enter First name" name="name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="city">City:</label>
+                                        <input type="text" class="form-control" id="update_city" placeholder="Enter City" name="city">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Email:</label>
+                                        <input type="email" class="form-control" id="update_email" placeholder="Enter Email" name="email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="role">Role:</label>
+                                        <input type="role" class="form-control" id="update_role"  name="role" readonly>
+                                    </div>
+                                </form>
+                  
+                            </div>
+                    
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    <button type="submit" id="update_table" class="btn btn-primary">update</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <script type="text/javascript">
             $(document).ready(function(){
                 $('#myTable').DataTable()
             })
+
+            //edit data
+            $('.edit').click(function(){
+                id=this.id;
+                $.ajax({
+                    type:'GET',
+                    url:`/user/${id}`,
+                    success: function(data){
+                        $('#update_id').attr("value",data._id)
+                        $("#update_name").attr("value", data.name);
+                        $("#update_city").attr("value", data.city);
+                        $("#update_email").attr("value", data.email);
+                        $("#update_role").attr("value", data.role);
+                        $('#Modal').modal({show: true});
+                    }
+                })
+            })
+            $('.delete').click(function() {
+                    var response = confirm("do you want to delete")
+                    id = this.id;
+                    console.log(response)
+                    if(response === true){
+                        $.ajax({
+                            type: 'PUT',
+                            url: '/deactivateUser',
+                            data: {"_id":id},
+                            success: function(data){
+                                //console.log('data is '+JSON.stringify(data));
+                                window.location.reload()
+                            },
+                            error: function(){
+                                alert('No data');
+                            }
+                        });
+                    }
+                    else{
+                        console.log("not deleted")
+                    }
+                });
+                $('.activate').click(function() {
+                    var response = confirm("do you want to activate")
+                    id = this.id;
+                    console.log(response)
+                    if(response === true){
+                        $.ajax({
+                            type: 'PUT',
+                            url: '/activateUser',
+                            data: {"_id":id},
+                            success: function(data){
+                                //console.log('data is '+JSON.stringify(data));
+                                window.location.reload()
+                            },
+                            error: function(){
+                                alert('No data');
+                            }
+                        });
+                    }
+                    else{
+                        console.log("not deleted")
+                    }
+                });
+            // update data
+            $(function(){
+                      $('#update_table').on('click', function(e){
+                        var data = $('#update_user').serialize();
+                        console.log(">>>>>", data)
+                        e.preventDefault();
+                        $.ajax({
+                          url: '/updateUser',
+                          type:'PUT',
+                          data : data,
+                          success: function(data){
+                              console.log("success of update")
+                              window.location.reload()
+                        },
+                        error: function(){
+                          alert('No data');
+                        }
+                      });
+                  });
+                  });
         </script>
     </body>
 </html>

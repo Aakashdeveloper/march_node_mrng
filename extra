@@ -12,10 +12,9 @@ Node-Es6(.babel)
 Redis  > 6379
 MongoDb Basic >27017  (local/cloud)
 Api with NodeJS(Rest)
-//////////////
-
 DashBoard(Crud)
 Testing
+//////////////
 Login/Logout(JWT)
 
 Oauth(with github)
@@ -214,3 +213,5 @@ https://www.mongodb.com/cloud/atlas
 
 
     npm i express cors ejs mongodb body-parser chai chai-http mocha
+
+npm i bcryptjs mongoose body-parser cors express jsonwebtoken

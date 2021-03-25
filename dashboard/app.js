@@ -30,12 +30,24 @@ app.get('/',(req,res) => {
     })
 })
 
+// Add user
+app.get('/new',(req,res) => {
+    res.render('admin')
+})
+
 // post User
 app.post('/addUser',(req,res) => {
     console.log(req.body)
-    db.collection(col_name).insert(req.body,(err,result) => {
+    var data ={
+        "name": req.body.name,
+        "email": req.body.email,
+        "city": req.body.city,
+        "role": req.body.role?req.body.role:'User',
+        "isActive": req.body.isActive?req.body.isActive:true
+    }
+    db.collection(col_name).insert(data,(err,result) => {
         if(err) throw err;
-        res.status(200).send('Data Added')
+        res.redirect('/')
     })
 })
 
@@ -75,7 +87,6 @@ app.put('/updateUser',(req,res) => {
         {
             $set:{
                 name: req.body.name,
-                password: req.body.password,
                 email: req.body.email,
                 city: req.body.city,
                 role: req.body.role,
