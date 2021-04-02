@@ -18,19 +18,17 @@ Login/Logout(JWT)
 Oauth(with github)
 ImageUpload
 Oauth(with google)
-//////////////
-OO_NodeJs
-
-NodeJs with postgres
-GraphQl API
-
 Github
 --Deployment---
 Nginx
 Pm2
 Docker
 Heroku
+//////////////
+OO_NodeJs
+NodeJs with postgres
 
+GraphQl API
 Chatapp
 Email With Node(nodemailer)
 FIREBASE(0PTIONAL)
@@ -242,5 +240,23 @@ npm i bcryptjs mongoose body-parser cors express jsonwebtoken
 https://docs.github.com/en/developers/apps/authorizing-oauth-apps
 http://www.passportjs.org/docs/google/
 
-6b8c2d1cdecf1ddbc839
-ae02d9c830f1cf24b2ed9cb7899046335e818624
+
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/Aakashdeveloper/nodeprod.git
+git push -u origin master
+
+git add .
+git commit -m "first commit"
+git push
+
+git pull
+
+git clone url
+ 
+///////////
+npm i -g pm2
+pm2 status
+pm2 start filename
+pm2 stop filename 
