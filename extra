@@ -24,11 +24,10 @@ Nginx
 Pm2
 Docker
 Heroku
-//////////////
 OO_NodeJs
 NodeJs with postgres
-
 GraphQl API
+//////////////
 Chatapp
 Email With Node(nodemailer)
 FIREBASE(0PTIONAL)
@@ -260,3 +259,10 @@ npm i -g pm2
 pm2 status
 pm2 start filename
 pm2 stop filename 
+
+npm i express mongodb @babel/core @babel/preset-env @babel/register
+
+npm i axios express express-graphql graphql
+
+npm i -g json-server
+json-server --watch db.json --port 8900
