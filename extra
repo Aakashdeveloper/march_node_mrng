@@ -27,9 +27,9 @@ Heroku
 OO_NodeJs
 NodeJs with postgres
 GraphQl API
-//////////////
 Chatapp
-Email With Node(nodemailer)
+Email With Node(sendgird)(https://app.sendgrid.com/)
+////////
 FIREBASE(0PTIONAL)
 --------NOT---------
 React/Angular
@@ -266,3 +266,6 @@ npm i axios express express-graphql graphql
 
 npm i -g json-server
 json-server --watch db.json --port 8900
+
+// 13 april
+https://us02web.zoom.us/j/5588867882?pwd=TEtYR2czVUovV2t5ekFPWHZBdlo0Zz09
